@@ -4,8 +4,8 @@ namespace JeuBataille.Entity;
 
 public class Carte
 {
-    private EnumCouleur Couleur { get; set; }
-    private EnumCarteValeurs Valeur { get; set; }
+    public EnumCouleur Couleur { get; }
+    public EnumCarteValeurs Valeur { get; }
 
     public Carte(EnumCouleur couleur, EnumCarteValeurs valeur)
     {
@@ -13,8 +13,10 @@ public class Carte
         Valeur = valeur;
     }
 
-    public void DisplayInfo()
+    public override string ToString()
     {
-        Console.Write($"{Valeur} de {Couleur}");
+        return ($"{Valeur} de {Couleur}");
     }
+
+    
 }
