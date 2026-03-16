@@ -18,5 +18,10 @@ public class Carte
         return ($"{Valeur} de {Couleur}");
     }
 
+    public int GetValue()
+    {
+        return (int)Valeur;
+    }
+
     
 }
