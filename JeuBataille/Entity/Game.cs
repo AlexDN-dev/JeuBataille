@@ -53,8 +53,15 @@ public class Game
             {
                 Console.WriteLine("BATAILLE !");
 
-                if (player1Deck.Count < 2 || player2Deck.Count < 2)
+                if (player1Deck.Count < 2 || player2Deck.Count < 2) //défaite automatique si l'un des deux n'a plus assez de carte pour la bataille
+                {
+                    if (player1Deck.Count < player2Deck.Count)
+                        Console.WriteLine("J1 ne peut pas continuer. J2 gagne !");
+                    else
+                        Console.WriteLine("J2 ne peut pas continuer. J1 gagne !");
+        
                     return;
+                }
                 
                 pile.Push(player1Deck.Dequeue());
                 pile.Push(player2Deck.Dequeue());
